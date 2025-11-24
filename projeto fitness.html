@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AironFitness | Sua Academia com Foco em Resultados</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+
+    
+    <header>
+      <h1>AironFitness</h1>
+      <nav>
+        <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+        <ul id="menu-principal">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#calculadora">Calculadora IMC</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <img
+          src="pessoatreino.jpeg"
+          alt="Pessoas treinando em academia moderna."
+        />
+        <div>
+          <h2>Transforme seu corpo e sua vida na AironFitness!</h2>
+          <p>
+            Nossos planos são desenhados para todos os níveis, do iniciante ao
+            atleta.
+          </p>
+          <a href="#planos" class="btn-cta">Ver Planos</a>
+        </div>
+      </section>
+
+      <section id="planos" class="container">
+        <h3>Nossos Planos de Treino</h3>
+        <div class="grid-planos">
+          <article class="plano-card">
+            <h4>Plano Básico</h4>
+            <p>Acesso limitado a equipamentos e aulas selecionadas.</p>
+            <a href="#contato" class="btn-plano">Saiba Mais</a>
+          </article>
+          <article class="plano-card">
+            <h4>Plano Premium</h4>
+            <p>Acesso total, piscina e acompanhamento nutricional mensal.</p>
+            <a href="#contato" class="btn-plano">Saiba Mais</a>
+          </article>
+          <article class="plano-card">
+            <h4>Plano VIP</h4>
+            <p>Tudo do Premium + personal trainer exclusivo 3x por semana.</p>
+            <a href="#contato" class="btn-plano">Saiba Mais</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculadora" class="container">
+        <h3>Calculadora de IMC (Índice de Massa Corporal)</h3>
+        <p>Use nossa ferramenta para avaliar sua condição física.</p>
+
+        <form id="form-imc">
+          <div class="form-group">
+            <label for="peso">Peso (kg):</label>
+            <input
+              type="number"
+              id="peso"
+              name="peso"
+              step="0.1"
+              min="1"
+              required
+              aria-label="Seu peso em quilogramas"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="altura">Altura (m):</label>
+            <input
+              type="number"
+              id="altura"
+              name="altura"
+              step="0.01"
+              min="0.5"
+              required
+              aria-label="Sua altura em metros"
+            />
+          </div>
+
+          <button type="submit" id="btn-calcular-imc">Calcular IMC</button>
+        </form>
+
+        <div id="resultado-imc" aria-live="polite"></div>
+      </section>
+
+      <section id="contato" class="container">
+        <h3>Entre em Contato ou Cadastre-se</h3>
+
+        <form id="form-contato">
+          <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="plano-interesse">Plano de Interesse:</label>
+            <select id="plano-interesse" name="plano-interesse" required>
+              <option value="">Selecione um plano</option>
+              <option value="basico">Plano Básico</option>
+              <option value="premium">Plano Premium</option>
+              <option value="vip">Plano VIP</option>
+            </select>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="termos" name="termos" required />
+            <label for="termos">Concordo com os Termos de Serviço.</label>
+          </div>
+
+          <button type="submit" class="btn-cta">Enviar Cadastro</button>
+        </form>
+      </section>
+
+      <section class="video-section">
+        <h3>Assista e Motive-se</h3>
+        <div class="video-wrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/eApINgrw2I4?si=aN1R3qI91x5kRsVC"
+            title="Vídeo de Treino Motivacional"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 AironFitness. Todos os direitos reservados.</p>
+      <p>Endereço: Rua da Força, 123 | Telefone: (00) 1234-5678</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
